@@ -1,0 +1,7 @@
+<form (ngSubmit)="onSubmit(zipvalue.value)" #zipForm="ngForm">
+  <p class="err" [hidden]="validinput"> Invalid Input </p>
+  <md-input placeholder="Enter your Zip Code" maxlength="5" 
+    dividerColor="primary" #zipvalue name="zipvalue" value=""
+    (keyup)="numLenCheck(zipvalue.value)">
+  </md-input>
+</form>
